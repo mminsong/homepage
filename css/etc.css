@@ -1,0 +1,50 @@
+
+.etc{
+	margin: 0 auto;
+	padding: 15px 0;
+	max-width: 1200px;
+}
+.etc .content{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	padding: 30px 0;
+	width: 100%;
+	height: 350px;
+}
+.etc .content1{
+	width: 100%;
+	background-color:aliceblue;
+}
+.etc .content2{
+	width: 100%;
+	background-color:skyblue;
+}
+.etc .content3{
+	width: 100%;
+	background-color:azure;
+}
+.etc .content1 .title,
+.etc .content2 .title,
+.etc .content3 .title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.etc .content1 .work .underline,
+.etc .content2 .call .underline,
+.etc .content3 .map .underline{
+	display: block;
+    width: 80%;
+	height: 2px;
+    background-color: black;
+	margin-top: 20px;
+	margin-left:35px;
+}
+.etc .content1 .box1{
+    font-size: 19px;
+    line-height: 180%;
+}
