@@ -7,8 +7,11 @@
     width: 50%;
     display: flex;
 }
+.nav .logo_img{
+    margin-left: 20px;
+}
 .nav .logo .logo_text{
-    margin-left: 30px;
+    margin-left: 20px;
     font-size: 25px;
 }
 .nav .menu_tab{
