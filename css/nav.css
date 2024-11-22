@@ -6,6 +6,7 @@
 .nav .logo{
     width: 50%;
     display: flex;
+    cursor: pointer;
 }
 .nav .logo_img{
     margin-left: 20px;
