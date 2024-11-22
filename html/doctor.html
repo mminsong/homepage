@@ -6,15 +6,34 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
     />
-    
+    <script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <!--
+    <script>
+        $(function(){
+            $("footer").load("footer");
+        });
+    </script>
+    -->
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+          $(function(){
+      $("#footer").load("/html/footer.html");
+    });
+   </script>
 </head>
 <body>
     <div id="footer"></div>
+    <!--
     <script>
         $(document).ready(function(){
             $("#footer").load("footer.html");
         });
     </script>
+    -->
+    
 </body>
 </html>
