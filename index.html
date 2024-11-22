@@ -1,130 +1,168 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head style="background-color: black">
-    <title>배곧건치과의원</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
-    />
-    <link rel="stylesheet" type="text/css" href="css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="css/pic.css" />
-    <link rel="stylesheet" type="text/css" href="css/etc.css" />
-    <link rel="stylesheet" type="text/css" href="css/footer.css" />
-	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="images/teeth.png" />
-    
-    <style>
-      html {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        min-height: 100vh;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-    </style>
-    
-  </head>
-  <body>
-    <section class="nav">
-      <div class="logo">
-        <div class="logo_img" onclick="loaction.href='../index.html'">
-          <img class="teeth" src="images/teeth.png" />
-        </div>
-        <div class="logo_text">배곧건치과의원</div>
+
+<head style="background-color: black">
+  <title>배곧건치과의원</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/nav.css" />
+  <link rel="stylesheet" type="text/css" href="css/pic.css" />
+  <link rel="stylesheet" type="text/css" href="css/etc.css" />
+  <link rel="stylesheet" type="text/css" href="css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="css/map.css" />
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/teeth.png" />
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=soi3owqsyo"></script>
+
+
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="nav">
+    <div class="logo">
+      <div class="logo_img" onclick="loaction.href='../index.html'">
+        <img class="teeth" src="images/teeth.png" />
       </div>
-      <div class="menu_tab">
-        <div class="menu_name" id="doctor" onclick="location.href='html/doctor.html'">의료진소개</div>
-        <div class="menu_name" onclick="location.href='html/list.html'">치료항목</div>
-        <div class="menu_name" onclick="location.href='html/tool.html'">치료기구</div>
-        <div class="menu_name" onclick="location.href='html/reservation.html'">예약</div>
-        <div class="menu_name" onclick="location.href='html/map.html'">오시는길</div>
-      </div>
-    </section>
-    <section class="main_pic">
-      <img class="pic" src="images/1.jpg" />
-      <div class="pic_text">
-        <div class="pic_text1">모두의 건치를 위한</div>
-        <div class="pic_text2">배곧건치과</div>
-      </div>
-    </section>
-    <section class="etc">
-      <div class="content">
-        <div class="content1">
-          <div class="title">진료시간</div>
-          <div class="work">
-            <div class="underline"></div>
-            <ul>
-              <li class="box1">
-                <div class="info">월, 수, 금 : 09:00 - 18:00</div>
-                <div class="info">
-                  화, 목 : 09:00 - 22:00
-                  <span style="color: red">(야간진료)</span>
-                </div>
-                <div class="info">토 : 09:00 - 13:00</div>
-                <div class="info">점심시간 : 13:00 - 14:00</div>
-                <div class="info" style="color: red">
-                  일요일 및 공휴일은 휴진입니다.
-                </div>
-                <div class="info" style="color: red">
-                  토요일은 점심시간 없이 진료합니다.
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="content2">
-          <div class="title">문의연락</div>
-          <div class="call">
-            <div class="underline"></div>
-            <ul>
-              <li class="box2" style="height: 100%">
-                <div class="number">
-                  <a href="tel: 031-8042-7528" 
-                    >031-8042-7528</a
-                  >
-                </div>
-                <div class="text">
-                  ※ 예약없이 내원하셔도 당일진료 가능합니다.
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="content3">
-          <div class="title">네이버 예약</div>
-          <div class="map">
-            <div class="underline"></div>
-            <ul>
-              <li class="box3">
-                <a href="https://www.naver.com" target="_blank"
-                  ><img src="images/naver.png"
-                /></a>
-              </li>
-            </ul>
-          </div>
+      <div class="logo_text">배곧건치과의원</div>
+    </div>
+    <div class="menu_tab">
+      <div class="menu_name" id="doctor" onclick="location.href='html/doctor.html'">의료진소개</div>
+      <div class="menu_name" onclick="location.href='html/list.html'">치료항목</div>
+      <div class="menu_name" onclick="location.href='html/tool.html'">치료기구</div>
+      <div class="menu_name" onclick="location.href='html/reservation.html'">예약</div>
+      <div class="menu_name" onclick="location.href='html/map.html'">오시는길</div>
+    </div>
+  </section>
+  <section class="main_pic">
+    <img class="pic" src="images/1.jpg" />
+    <div class="pic_text">
+      <div class="pic_text1">모두의 건치를 위한</div>
+      <div class="pic_text2">배곧건치과</div>
+    </div>
+  </section>
+  <section class="etc">
+    <div class="content">
+      <div class="content1">
+        <div class="title">진료시간</div>
+        <div class="work">
+          <div class="underline"></div>
+          <ul>
+            <li class="box1">
+              <div class="info">월, 수, 금 : 09:00 - 18:00</div>
+              <div class="info">
+                화, 목 : 09:00 - 22:00
+                <span style="color: red">(야간진료)</span>
+              </div>
+              <div class="info">토 : 09:00 - 13:00</div>
+              <div class="info">점심시간 : 13:00 - 14:00</div>
+              <div class="info" style="color: red">
+                일요일 및 공휴일은 휴진입니다.
+              </div>
+              <div class="info" style="color: red">
+                토요일은 점심시간 없이 진료합니다.
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-    <section class="footer" id="footer" style="background-color: gainsboro;">
-		<div class="inner">
-			<div>대표 : 이지은</div>
-			<div>상호 : 배곧건치과의원</div>
-			<a href="tel: 031-8042-7528">TEL : 031-8042-7528</a>
-			<div>주소 : 경기 시흥시 배곧5로 66-7 2층</div>
-			<div>© Copyright ©배곧건치과의원. All Rights Reserved</div>
-		</div>
-	</section>
+      <div class="content2">
+        <div class="title">문의연락</div>
+        <div class="call">
+          <div class="underline"></div>
+          <ul>
+            <li class="box2" style="height: 100%">
+              <div class="number">
+                <a href="tel: 031-8042-7528">031-8042-7528</a>
+              </div>
+              <div class="text">
+                ※ 예약없이 내원하셔도 당일진료 가능합니다.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content3">
+        <div class="title">네이버 예약</div>
+        <div class="map">
+          <div class="underline"></div>
+          <ul>
+            <li class="box3">
+              <a href="https://www.naver.com" target="_blank"><img src="images/naver.png" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="map">
+    <div class="map_title">오시는 길</div>
+    <div id="map" class="map_api" style="height: 500px;">
+      <!--
+        <script id="code">
+        var map = new naver.maps.Map('map', {
+          center: new naver.maps.LatLng(37.3820772, 126.7346576), //지도의 초기 중심 좌표
+          zoom: 17, //지도의 초기 줌 레벨
+          minZoom: 8, //지도의 최소 줌 레벨
+          zoomControl: true, //줌 컨트롤의 표시 여부
+          zoomControlOptions: { //줌 컨트롤의 옵션
+            position: naver.maps.Position.TOP_RIGHT
+          }
+        });
+        var marker = new naver.maps.Marker({
+          position: new naver.maps.LatLng(37.3820772, 126.7346576),
+          map: map
+        });
+      </script>
+      -->
+      <script>
+        var map = new naver.maps.Map('map', {
+          center: new naver.maps.LatLng(37.3820772, 126.7346576), // Example coordinates
+          zoom: 17, //지도의 초기 줌 레벨
+          minZoom: 8, //지도의 최소 줌 레벨
+          zoomControl: true, //줌 컨트롤의 표시 여부
+          zoomControlOptions: { //줌 컨트롤의 옵션
+            position: naver.maps.Position.TOP_RIGHT
+          }
+        });
+        var marker = new naver.maps.Marker({
+          position: new naver.maps.LatLng(37.3820772, 126.7346576),
+          map: map
+        });
+
+      </script>
+    </div>
+  </section>
+  <section class="footer" id="footer" style="background-color: gainsboro;">
+    <div class="inner">
+      <div>대표 : 이지은</div>
+      <div>상호 : 배곧건치과의원</div>
+      <a href="tel: 031-8042-7528">TEL : 031-8042-7528</a>
+      <div>주소 : 경기 시흥시 배곧5로 66-7 2층</div>
+      <div>© Copyright ©배곧건치과의원. All Rights Reserved</div>
+    </div>
+  </section>
   <script>
-    $(function(){
+    $(function () {
       $("#footer").load("/html/footer.html");
     });
   </script>
-  </body>
+</body>
+
 </html>
