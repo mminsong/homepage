@@ -18,4 +18,5 @@
 }
 .nav .menu_tab .menu_name{
     font-size: 25px;
+    cursor: pointer;
 }

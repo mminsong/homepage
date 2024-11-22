@@ -10,7 +10,10 @@
     <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <link rel="stylesheet" type="text/css" href="css/pic.css" />
     <link rel="stylesheet" type="text/css" href="css/etc.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/teeth.png" />
+    
     <style>
       html {
         height: 100%;
@@ -26,21 +29,22 @@
       }
       
     </style>
+    
   </head>
   <body>
     <section class="nav">
       <div class="logo">
-        <div class="logo_img">
+        <div class="logo_img" onclick="loaction.href='../index.html'">
           <img class="teeth" src="images/teeth.png" />
         </div>
         <div class="logo_text">배곧건치과의원</div>
       </div>
       <div class="menu_tab">
-        <div class="menu_name">의료진소개</div>
-        <div class="menu_name">치료항목</div>
-        <div class="menu_name">치료기구</div>
-        <div class="menu_name">예약</div>
-        <div class="menu_name">오시는길</div>
+        <div class="menu_name" id="doctor" onclick="location.href='html/doctor.html'">의료진소개</div>
+        <div class="menu_name" onclick="location.href='html/list.html'">치료항목</div>
+        <div class="menu_name" onclick="location.href='html/tool.html'">치료기구</div>
+        <div class="menu_name" onclick="location.href='html/reservation.html'">예약</div>
+        <div class="menu_name" onclick="location.href='html/map.html'">오시는길</div>
       </div>
     </section>
     <section class="main_pic">
@@ -104,5 +108,14 @@
         </div>
       </div>
     </section>
+    <section class="footer" style="background-color: gainsboro;">
+		<div class="inner">
+			<div>대표 : 이지은</div>
+			<div>상호 : 배곧건치과의원</div>
+			<a href="tel: 031-8042-7528">TEL : 031-8042-7528</a>
+			<div>주소 : 경기 시흥시 배곧5로 66-7 2층</div>
+			<div>© Copyright ©배곧건치과의원. All Rights Reserved</div>
+		</div>
+	</section>
   </body>
 </html>
