@@ -55,11 +55,34 @@
       <div class="nav_title" onclick="location.href='#nav_title5'">오시는길</div>
     </div>
     <div class="nav_content">
-        <img class="content1" id="nav_title1"src="../images/intro_doctor.png">
-      <div class="content1" id="nav_title2">2</div>
-      <div class="content1" id="nav_title3">3</div>
-      <div class="content1" id="nav_title4">4</div>
-      <div class="content1" id="nav_title5">5</div>
+      
+      <div class="content1" id="nav_title1">1</div>
+      <img class="content2" id="nav_title2" src="../images/intro_doctor.png">
+      <div class="content3" id="nav_title3">3</div>
+      <div class="content4" id="nav_title4">4</div>
+      <div class="content5" id="nav_title5">
+          <div id="map" class="map_api" style="height: 500px;">
+            <script>
+              var map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.3820772, 126.7346576), // Example coordinates
+                zoom: 17, //지도의 초기 줌 레벨
+                minZoom: 8, //지도의 최소 줌 레벨
+                zoomControl: true, //줌 컨트롤의 표시 여부
+                zoomControlOptions: { //줌 컨트롤의 옵션
+                  position: naver.maps.Position.TOP_RIGHT
+                }
+              });
+              var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(37.3820772, 126.7346576),
+                map: map,
+                icon:{
+                  url: 'images/teeth.png'
+                }
+              });
+      
+            </script>
+          </div>
+      </div>
     </div>
   </section>
 
