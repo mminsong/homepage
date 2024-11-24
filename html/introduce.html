@@ -2,66 +2,73 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>배곧건치과의원</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../images/teeth.png" />
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>배곧건치과의원</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/teeth.png" />
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
-    <link rel="stylesheet" type="text/css" href="../css/introduce/pic.css" />
-    <link rel="stylesheet" type="text/css" href="../css/introduce/nav.css" />
-    <style>
-        html {
-          height: 100%;
-          width: 100%;
-        }
-    
-        body {
-          margin: 0;
-          min-height: 100vh;
-        }
-    
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-      </style>
+  <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+  <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="../css/introduce/pic.css" />
+  <link rel="stylesheet" type="text/css" href="../css/introduce/nav.css" />
+  <link rel="stylesheet" type="text/css" href="../css/introduce/intro_nav.css" />
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="nav"></div>
-    <script>
-        $(document).ready(function () {
-            $("#nav").load("nav.html");
-        });
-    </script>
+  <div id="nav"></div>
+  <script>
+    $(document).ready(function () {
+      $("#nav").load("nav.html");
+    });
+  </script>
 
-    <section class="main_pic">
-      <img class="pic" src="../images/main_1.png" />
-       
-      </div>
-    </section>
-    <section class="intro_nav">
-      <div class="nav_bar">
-        <div class="nav_title">배곧건치과는?</div>
-        <div class="nav_title">의료진 소개</div>
-        <div class="nav_title">병원 둘러보기</div>
-        <div class="nav_title">진료안내</div>
-        <div class="nav_title">오시는길</div>
-      </div>
+  <section class="main_pic">
+    <img class="pic" src="../images/main_1.png" />
 
-    </section>
+    </div>
+  </section>
+  <section class="intro_nav">
+    <div class="nav_bar">
+      <div class="nav_title1" onclick="location.href='#nav_title1'">배곧건치과는?</div>
+      <div class="nav_title" onclick="location.href='#nav_title2'">의료진 소개</div>
+      <div class="nav_title" onclick="location.href='#nav_title3'">병원 둘러보기</div>
+      <div class="nav_title" onclick="location.href='#nav_title4'">진료안내</div>
+      <div class="nav_title" onclick="location.href='#nav_title5'">오시는길</div>
+    </div>
+    <div class="nav_content">
+        <img class="content1" id="nav_title1"src="../images/intro_doctor.png">
+      <div class="content1" id="nav_title2">2</div>
+      <div class="content1" id="nav_title3">3</div>
+      <div class="content1" id="nav_title4">4</div>
+      <div class="content1" id="nav_title5">5</div>
+    </div>
+  </section>
 
-    <div id="footer"></div>
-    <script>
-        $(document).ready(function () {
-            $("#footer").load("footer.html");
-        });
-    </script>
+  <div id="footer"></div>
+  <script>
+    $(document).ready(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
 </body>
 
 </html>
