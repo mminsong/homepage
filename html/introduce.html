@@ -53,56 +53,56 @@
       <div class="nav_title" data-tab-section="nav_title3">병원 둘러보기</div>
       <div class="nav_title" data-tab-section="nav_title4">진료안내</div>
       <div class="nav_title" data-tab-section="nav_title5">오시는길</div>
-      
+
     </div>
 
     <div class="nav_content">
       <div class="content" id="nav_title1">1</div>
-      <img class="content" id="nav_title2" src="../images/intro_doctor.png">
+      <img class="content" id="nav_title2" src="../images/intro_doctor.png"></div>
       <div class="content" id="nav_title3">3</div>
       <div class="content" id="nav_title4">4</div>
       <div class="content" id="nav_title5">
-            <script>
-              var map = new naver.maps.Map('map', {
-                center: new naver.maps.LatLng(37.3820772, 126.7346576), // Example coordinates
-                zoom: 17, //지도의 초기 줌 레벨
-                minZoom: 8, //지도의 최소 줌 레벨
-                zoomControl: true, //줌 컨트롤의 표시 여부
-                zoomControlOptions: { //줌 컨트롤의 옵션
-                  position: naver.maps.Position.TOP_RIGHT
-                }
-              });
-              var marker = new naver.maps.Marker({
-                position: new naver.maps.LatLng(37.3820772, 126.7346576),
-                map: map,
-                icon:{
-                  url: '../images/teeth.png'
-                }
-              });
-      
-            </script>
+        <script>
+          var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.3820772, 126.7346576), // Example coordinates
+            zoom: 17, //지도의 초기 줌 레벨
+            minZoom: 8, //지도의 최소 줌 레벨
+            zoomControl: true, //줌 컨트롤의 표시 여부
+            zoomControlOptions: { //줌 컨트롤의 옵션
+              position: naver.maps.Position.TOP_RIGHT
+            }
+          });
+          var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.3820772, 126.7346576),
+            map: map,
+            icon: {
+              url: '../images/teeth.png'
+            }
+          });
+
+        </script>
       </div>
     </div>
 
     <script>
-      const $nav=document.querySelector('#nav_bar')
-      const $sections=document.querySelectorAll('.content');
+      const $nav = document.querySelector('#nav_bar')
+      const $sections = document.querySelectorAll('.content');
 
       $nav.addEventListener('click', (e) => {
-      if (!e.target.classList.contains('nav_title')) {
-        return;
-      }
-      
-      const focusedTabId = e.target.dataset.tabSection;
-
-      $sections.forEach(($section) => {
-        if ($section.id === focusedTabId) {
-          $section.removeAttribute('hidden');
-        } else {
-          $section.setAttribute('hidden', true);
+        if (!e.target.classList.contains('nav_title')) {
+          return;
         }
+
+        const focusedTabId = e.target.dataset.tabSection;
+
+        $sections.forEach(($section) => {
+          if ($section.id === focusedTabId) {
+            $section.removeAttribute('hidden');
+          } else {
+            $section.setAttribute('hidden', true);
+          }
+        });
       });
-    });
     </script>
     <!--
     <div class="nav_content">
