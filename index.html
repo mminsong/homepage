@@ -19,6 +19,7 @@
   <style>
     html {
       height: 100%;
+      width: 100%;
     }
 
     body {
@@ -137,16 +138,13 @@
     </div>
     <button class="top" onclick="window.scrollTo(0,0)"> ▲ <br/> TOP </button >
   </section>
-  <section class="footer" id="footer" style="background-color: gainsboro;">
-    <div class="inner">
-      <div>대표 : 이지은</div>
-      <div>상호 : 배곧건치과의원</div>
-      <a href="tel: 031-8042-7528">TEL : 031-8042-7528</a>
-      <div>주소 : 경기 시흥시 배곧5로 66-7 2층</div>
-      <div>© Copyright ©배곧건치과의원. All Rights Reserved</div>
-    </div>
-    
-  </section>
+  
+  <div id="footer"></div>
+    <script>
+        $(document).ready(function(){
+            $("#footer").load("footer.html");
+        });
+    </script>
   
 </body>
 
