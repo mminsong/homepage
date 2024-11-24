@@ -12,6 +12,9 @@
     width: 100%;
 }
 #nav_title2{
-    width:100%;
-    height: 500px;
+    padding: 30px;
+    width: 100%;
+    height: 700px;
+    display: block;
+    object-fit: cover;
 }
