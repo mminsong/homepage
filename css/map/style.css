@@ -1,0 +1,27 @@
+.main_pic{
+    width: 100%;
+}
+.main_pic .pic{
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+}
+
+/* 오시는 길 */
+.map{
+    width: 100%;
+}
+.map_text{
+    text-align: center;
+    margin: 30px;
+}
+.map .map_box{
+    width: 100%;
+}
+.map .map_api{
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
