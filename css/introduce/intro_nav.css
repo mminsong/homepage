@@ -21,3 +21,6 @@
     transform: translate(-60%);
     margin-top: 20px;
 }
+.nav_title{
+    cursor: pointer;
+}
