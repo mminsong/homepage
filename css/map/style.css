@@ -18,6 +18,7 @@
 }
 .map .map_box{
     width: 100%;
+    margin-bottom: 30px;
 }
 .map .map_api{
     width: 80%;
