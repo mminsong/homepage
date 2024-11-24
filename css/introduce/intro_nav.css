@@ -8,8 +8,10 @@
 .intro_nav .nav_bar .nav_intro{
     display: flex;
 }
-.intro_nav .nav_content .content2{
+.intro_nav .nav_content{
     width: 100%;
-    height: 700px;
-    padding-left:30px;
+}
+#nav_title2{
+    width:100%;
+    height: 500px;
 }
