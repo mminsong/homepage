@@ -1,5 +1,6 @@
 .main_pic{
     width: 100%;
+    margin-top:100px;
 }
 .main_pic .pic{
     width: 100%;
@@ -12,7 +13,7 @@
     line-height: 38px;
     font-weight: 600;
     position: absolute;
-    top: 25%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
