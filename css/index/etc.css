@@ -50,7 +50,7 @@ ul{
 .etc .content1 .title,
 .etc .content2 .title,
 .etc .content3 .title{
-    padding-top: 15px;
+    padding-top: 20px;
 }
 .etc .content1 .box1{
     font-size: 19px;
@@ -75,9 +75,8 @@ ul{
 }
 .etc .content3 .map .box3{
 	position: relative;
-	top: 50%;
     left: 50%;
-    transform: translate(-35%, -5%);
+    transform: translate(-35%, 0%);
 }
 @media screen and (max-width: 550px){
 	.etc .content{
