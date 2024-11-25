@@ -1,4 +1,7 @@
 #nav_title1 >img,
-#nav_title2 >img{
+#nav_title2 >img,
+#nav_title3 >img,
+#nav_title4 >img,
+#nav_title5 >img{
     width: 100%;
 }
