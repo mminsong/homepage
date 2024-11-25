@@ -54,20 +54,24 @@ ul{
 }
 .etc .content1 .box1{
     font-size: 19px;
-    line-height: 180%;
-    padding : 30px;
+    padding-top: 20px;
+	padding-left: 30px;
+	padding-bottom: 20px;
 }
-.etc .content2 .box2 .number{
-    font-size: 30px;
-	padding: 30px 0;
-	font-weight: 550;
-    text-align: center;
+.etc .content2 .box2{
+	padding-top: 20px;
 }
 .etc .content2 .box2 .number > a{
     font-size: 30px;
     text-decoration: none; 
     color: black;
-    padding-top: 20px;
+	font-weight: 550;
+	margin-left:60px;
+}
+.etc .content2 .box{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
 }
 .etc .content2 .box2 .text{
 	padding: 70px 0;
@@ -75,6 +79,13 @@ ul{
 }
 .etc .content3 .naver{
 	width: 100%;
+	position: relative;
+}
+.etc .content3 .naver .box3{
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
 }
 @media screen and  (max-width:480px){
 	.etc .content{

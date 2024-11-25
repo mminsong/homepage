@@ -79,6 +79,18 @@
       const $nav = document.querySelector('#nav_bar')
       const $sections = document.querySelectorAll('.content');
 
+      window.onload = function () {
+        const initialSection = document.getElementById("nav_title1");
+
+        $sections.forEach(($section) => {
+          if ($section === initialSection) {
+            $section.removeAttribute('hidden'); // 초기 섹션 보이기
+          } else {
+            $section.setAttribute('hidden', true); // 나머지 숨기기
+          }
+        });
+      };
+
       $nav.addEventListener('click', (e) => {
         if (!e.target.classList.contains('nav_title')) {
           return;
