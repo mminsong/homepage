@@ -59,6 +59,8 @@
 .etc .content1 .box1 {
 	font-size: 19px;
 	padding: 20px 30px;
+	letter-spacing: 1px;
+	line-height: 40px;
 }
 
 .etc .content2 .box2 {
