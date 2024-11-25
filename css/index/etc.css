@@ -1,11 +1,11 @@
-
-.etc{
+.etc {
 	margin: 0 auto;
 	padding: 15px 0;
 	max-width: 1200px;
 }
-.etc .content{
-    display: flex;
+
+.etc .content {
+	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
@@ -13,95 +13,116 @@
 	width: 100%;
 	height: 450px;
 }
-.etc .content1{
+
+.etc .content1 {
 	width: 100%;
-	background-color:aliceblue;
+	background-color: aliceblue;
 }
-.etc .content2{
+
+.etc .content2 {
 	width: 100%;
-	background-color:skyblue;
+	background-color: skyblue;
 }
-.etc .content3{
+
+.etc .content3 {
 	width: 100%;
-	background-color:azure;
+	background-color: azure;
 }
+
 .etc .content1 .title,
 .etc .content2 .title,
-.etc .content3 .title{
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
-    margin-top: 20px;
-    letter-spacing: 2px;
+.etc .content3 .title {
+	text-align: center;
+	font-size: 25px;
+	font-weight: 700;
+	margin-top: 20px;
+	letter-spacing: 2px;
 }
+
 .etc .content1 .work .underline,
 .etc .content2 .call .underline,
-.etc .content3 .naver .underline{
+.etc .content3 .naver .underline {
 	display: block;
-    width: 80%;
+	width: 80%;
 	height: 2px;
-    background-color: black;
+	background-color: black;
 	margin-top: 20px;
-	margin-left:35px;
+	margin-left: 35px;
 }
-ul{
-    list-style: none;
-}
+
 .etc .content1 .title,
 .etc .content2 .title,
-.etc .content3 .title{
-    padding-top: 20px;
-}
-.etc .content1 .box1{
-    font-size: 19px;
-    padding-top: 20px;
-	padding-left: 30px;
-	padding-bottom: 20px;
-}
-.etc .content2 .box2{
+.etc .content3 .title {
 	padding-top: 20px;
 }
-.etc .content2 .box2 .number > a{
-    font-size: 30px;
-    text-decoration: none; 
-    color: black;
-	font-weight: 550;
-	margin-left:60px;
+
+.etc .content1 .box1 {
+	font-size: 19px;
+	padding: 20px 30px;
 }
-.etc .content2 .box{
+
+.etc .content2 .box2 {
+	padding-top: 20px;
+}
+
+.etc .content2 .box2 .number>a {
+	font-size: 30px;
+	text-decoration: none;
+	color: black;
+	font-weight: 550;
+	margin-left: 60px;
+}
+
+.etc .content2 .box {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
 }
-.etc .content2 .box2 .text{
+
+.etc .content2 .box2 .text {
 	padding: 70px 0;
 	text-align: center;
 }
-.etc .content3 .naver{
+
+.etc .content3 .naver {
 	width: 100%;
 	position: relative;
 }
-.etc .content3 .naver .box3{
-	position:absolute;
+
+.etc .content3 .naver .box3 {
+	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%);
 }
-@media screen and  (max-width:480px){
-	.etc .content{
-		display:block;
+
+@media screen and (max-width:480px) {
+	.etc .content {
+		display: block;
 		height: 1150px;
+	}
+
+	.etc .content2 .call .box2 .number {
+		margin-left: 38px;
+
+	}
+
+	.etc .content3 {
+		width: 100%;
+		height: 35%;
+		background-color: azure;
 	}
 }
 
 @media screen and (min-width: 481px) and (max-width:768px) {
-	.etc .content{
+	.etc .content {
 		height: 550px;
 	}
+
 }
+
 @media screen and (min-width: 769px) and (max-width:1279px) {
 
 }
-@media screen and (max-width:1280px) {
 
-}
+@media screen and (max-width:1280px) {}
