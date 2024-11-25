@@ -1,5 +1,6 @@
 #nav_title1 >img{
-    width: 100%;
+    width: 60%;
+    transform: translate(35%);
 }
 #nav_title2{
     width: 100%;

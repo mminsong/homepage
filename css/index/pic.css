@@ -20,6 +20,11 @@
     color: white;
     width: 50%;
 }
+.main_pic .pic_text > div{
+    opacity: 0;
+    animation: fadeIn 5s ease forwards;
+
+}
 @media screen and (min-width: 300px) and (max-width:500px){
 	.main_pic .img .pic_text > div{
     font-size: 15px;

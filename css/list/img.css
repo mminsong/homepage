@@ -2,7 +2,8 @@
 #nav_title2 >img,
 #nav_title3 >img,
 #nav_title4 >img,
-#nav_title5 >img{
+#nav_title5 >img,
+#nav_title6 >img{
     width: 60%;
     transform: translate(35%);
 }
