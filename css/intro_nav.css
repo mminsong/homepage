@@ -14,6 +14,9 @@
 .intro_nav .nav_content{
     width: 100%;
 }
+.nav_title:hover{
+    color:cornflowerblue;
+}
 .nav_title{
     font-size: 20px;
     cursor: pointer;
