@@ -6,7 +6,7 @@
 
 .intro_nav .nav_bar{
     display: flex;
-    
+    margin-bottom: 20px;
     justify-content: space-around;
 }
 .intro_nav .nav_bar .nav_intro{
