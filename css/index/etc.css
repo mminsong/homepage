@@ -2,6 +2,7 @@
 	margin: 0 auto;
 	padding: 15px 0;
 	max-width: 1200px;
+	width: 100%;
 }
 
 .etc .content {
@@ -57,14 +58,16 @@
 }
 
 .etc .content1 .box1 {
-	font-size: 19px;
+	font-size: 18px;
 	padding: 20px 30px;
-	letter-spacing: 1px;
-	line-height: 40px;
 }
-
+.etc .content1 .box1 > div{
+	width: 100%;
+	object-fit: cover;
+}
 .etc .content2 .box2 {
 	padding-top: 20px;
+	text-align: center;
 }
 
 .etc .content2 .box2 .number>a {
@@ -72,30 +75,24 @@
 	text-decoration: none;
 	color: black;
 	font-weight: 550;
-	margin-left: 60px;
+	align-items: center;
 }
 
-.etc .content2 .box {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-}
 
 .etc .content2 .box2 .text {
 	padding: 70px 0;
 	text-align: center;
 }
-
+.etc .content2 .box2 > div {
+	object-fit: cover;
+}
 .etc .content3 .naver {
 	width: 100%;
 	position: relative;
 }
-
-.etc .content3 .naver .box3 {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%);
+.etc .content3 .naver .box3{
+	
+	text-align: center;
 }
 
 @media screen and (max-width:480px) {
