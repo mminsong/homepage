@@ -16,6 +16,7 @@
 }
 .nav_title:hover{
     color:cornflowerblue;
+    font-weight: bold;
 }
 .nav_title{
     font-size: 20px;
