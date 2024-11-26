@@ -27,22 +27,24 @@
 */
 
 .right-nav {
-    position: fixed; /* Keeps it fixed in the viewport */
-    top: 50%; /* Start at the middle of the viewport */
-    right: 0; /* Align to the right edge */
-    width: 7%; /* Set the width */
-    height: 40%; /* Occupy the lower half of the viewport */
-    background-color: #f8f9fa; /* Background color for visibility */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
-    padding: 20px;
-    overflow-y: auto; /* Enable scrolling if content exceeds */
-    transform: translateY(-50%); /* Start the top of the nav bar at the mid-point */
+  margin-right : 1%;
+    position: fixed;
+    top: 60%;
+    right: 0;
+    width: 7%;
+    height: 30%;
+    background-color: #f8f9fa; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+    transform: translateY(-50%); 
+    border-radius: 10%;
 }
 
 
 .right-nav .insta,
 .right-nav .blog {
   width: 100%;
+  
 }
 .right-nav .insta > a > img,
 .right-nav .blog > a > img,
