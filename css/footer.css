@@ -10,6 +10,7 @@
   transform: translateY(-50%); 
   border-radius: 20px;
   margin: 10px;
+  z-index: 1;
 }
 .right_nav .nav_box{
 margin: 10px;
@@ -20,10 +21,10 @@ width: 100%;
 }
 
 .right_nav .img > a > img,
+.right_nav .img .map > img,
 .right_nav .top > button {
 width: 100%;
 }
-
 .right_nav .nav_box .nav_text{
 text-align: center;
 font-size: 13px;
@@ -72,6 +73,7 @@ margin-bottom: 10px;
   }
 
   .sns_nav .img > a > img,
+  .sns_nav .img .map > img,
   .sns_nav .top > button {
     width: 100%;
     padding: 10px;
