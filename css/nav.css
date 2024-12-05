@@ -32,6 +32,24 @@
   font-size: 25px;
   cursor: pointer;
 }
+.menu_tab:hover .sub_menu{
+  height: 170px;
+}
+.sub_menu{
+  height: 0;
+  overflow: hidden;
+}
+.sub_menu .sub_menu_name{
+  font-size: 17px;
+  margin:5px 0;
+  font-weight: 500;
+}
+.sub_menu .sub_menu_name:hover{
+  color: blue;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 @media screen and (max-width:480px) {
   .nav {
     width: 100%;
