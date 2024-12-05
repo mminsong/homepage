@@ -94,7 +94,7 @@
               <img class="place_img" src="../images/place_11.jpg" />
               <img class="place_img" src="../images/place_12.jpg" />
             </div>
-          <button class="next">></button>
+            <button class="next">></button>
           </div>
           <script>
             let pages = 0; //현재 인덱스 번호
@@ -104,7 +104,7 @@
             const backBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
             const images = document.querySelector(".place");
-            const imgCnt=$('.place_img').length -1;
+            const imgCnt = $(".place_img").length - 1;
             function next() {
               if (pages < imgCnt) {
                 backBtn.removeAttribute("disabled"); //뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
