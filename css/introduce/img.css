@@ -5,6 +5,13 @@
 #nav_title2{
     width: 100%;
 }
+#nav_title3 .place_img{
+    display: flex;
+}
+#nav_title3 .place_img .place{
+    width: 60%;
+    transform: translate(35%);
+}
 #nav_title4{
     width: 100%;
 }
