@@ -85,13 +85,21 @@
               <img class="place_img" src="../images/place_2.jpg" />
               <img class="place_img" src="../images/place_3.jpg" />
               <img class="place_img" src="../images/place_4.jpg" />
+              <img class="place_img" src="../images/place_5.jpg" />
+              <img class="place_img" src="../images/place_6.jpg" />
+              <img class="place_img" src="../images/place_7.jpg" />
+              <img class="place_img" src="../images/place_8.jpg" />
+              <img class="place_img" src="../images/place_9.jpg" />
+              <img class="place_img" src="../images/place_10.jpg" />
+              <img class="place_img" src="../images/place_11.jpg" />
+              <img class="place_img" src="../images/place_12.jpg" />
             </div>
           <button class="next">></button>
           </div>
           <script>
             let pages = 0; //현재 인덱스 번호
             let positionValue = 0; //images 위치값
-            const IMAGE_WIDTH = 500; //한번 이동 시 IMAGE_WIDTH만큼 이동한다.
+            const IMAGE_HEIGHT = 105; //한번 이동 시 IMAGE_HEIGHT만큼 이동한다.
             //DOM
             const backBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
@@ -100,8 +108,8 @@
             function next() {
               if (pages < imgCnt) {
                 backBtn.removeAttribute("disabled"); //뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
-                positionValue -= IMAGE_WIDTH; //IMAGE_WIDTH의 증감을 positionValue에 저장한다.
-                images.style.transform = `translateX(${positionValue}px)`;
+                positionValue -= IMAGE_HEIGHT; //IMAGE_HEIGHT의 증감을 positionValue에 저장한다.
+                images.style.transform = `translateY(${positionValue}%)`;
                 //x축으로 positionValue만큼의 px을 이동한다.
                 pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
               }
@@ -114,8 +122,8 @@
             function back() {
               if (pages > 0) {
                 nextBtn.removeAttribute("disabled");
-                positionValue += IMAGE_WIDTH;
-                images.style.transform = `translateX(${positionValue}px)`;
+                positionValue += IMAGE_HEIGHT;
+                images.style.transform = `translateY(${positionValue}%)`;
                 pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
               }
               if (pages === 0) {
