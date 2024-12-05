@@ -1,47 +1,121 @@
-<!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <title>탭 연습</title>
-</head>
-<body>
-  <header>
-    <h1>탭 메뉴 연습하기</h1>
-    <nav id="tab-button-nav">
-      <button class="tab-button" data-tab-section="tab-section-1">탭 1</button>
-      <button class="tab-button" data-tab-section="tab-section-2">탭 2</button>
-      <button class="tab-button" data-tab-section="tab-section-3">탭 3</button>
-    </nav>
-  </header>
-  <main>
-    <br>
-    <section id="tab-section-1" class="tab-section">
-      <div>탭 1 페이지</div>
-    </section>
-    <section id="tab-section-2" class="tab-section" hidden>
-      <div>탭 2 페이지</div>
-    </section>
-    <section id="tab-section-3" class="tab-section" hidden>
-      <div>탭 3 페이지</div>
-    </section>
-  </main>
-  <script>
-    const $nav = document.querySelector('#tab-button-nav')
-    const $sections = document.querySelectorAll('.tab-section');
-
-    $nav.addEventListener('click', (e) => {
-      if (!e.target.classList.contains('tab-button')) {
-        return;
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="slide.css" />
+    <script defer src="slide.js"></script>
+    <title>slide</title>
+    <style>
+      .box {
+        width: 250px;
+        margin: 0 auto; /**중앙 정렬한다.**/
       }
-      
-      const focusedTabId = e.target.dataset.tabSection;
 
-      $sections.forEach(($section) => {
-        if ($section.id === focusedTabId) {
-          $section.removeAttribute('hidden');
-        } else {
-          $section.setAttribute('hidden', true);
+      /**사진**/
+      .slide {
+        /**이만큼의 크기로 보이겠다는 의미**/
+        width: 250px;
+        height: 333px; /**사진보다 크면 다음 사진까지 표시되어 img와 slide크기를 맞춘다.**/
+        overflow: hidden; /**이미지는 내장이라 overflow:hidden을 사용해 넘친 사진들을 안보이게 한다.**/
+      }
+      .images {
+        display: flex; /**좌우 슬라이드를 위해 flex로 사진을 가로정렬한다.**/
+        height: 333px; /**slide와 images의 높이가 다르면 부자연스럽게 표시돼 slide의 높이에 맞게 높이를 바꾼다.**/
+        transition: transform 0.5s;
+        /**어떤 속성에 대해 애니메이션 효과를 주는 속성이다. 
+tranform속성에 0.5초의 듀레이션(동작의 시작해서 끝나는 시간)을 준다.**/
+      }
+      img {
+        width: 250px;
+        height: 333px; /**slide 크기에 맞춘다.**/
+      }
+
+      /**버튼위치**/
+      .back {
+        position: relative;
+        bottom: 170px;
+        right: 35px;
+      }
+      .next {
+        position: relative;
+        bottom: 170px;
+        left: 220px;
+      }
+
+      /**버튼디자인**/
+      button {
+        width: 30px;
+        height: 30px;
+        color: white;
+        background: #646464;
+      }
+      button:active {
+        /**버튼을 클릭하는 동안 색을 바꾼다.**/
+        background: #3e3e3e;
+      }
+      button:disabled {
+        /**버튼 속성이 disabled되면 색을 바꾼다.**/
+        background: #cbcaca;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>food slide</h2>
+      <!--div를 두개 감싼이유는 img들을 좌우배치하고 배치된 사진중 한장만 보이게 하기 위해서이다.-->
+      <div class="slide">
+        <!--배치된 img들을 하나의 img만 보이게 가리기 위한 태그-->
+        <div class="images">
+          <!--img들을 좌우배치할 태그-->
+          <img src="../images/1.jpg" />
+          <img src="../images/2.jpg" />
+          <img src="../images/3.jpg" />
+        </div>
+      </div>
+      <button class="back">❮</button>
+      <button class="next">❯</button>
+    </div>
+    <script>
+      let pages = 0; //현재 인덱스 번호
+      let positionValue = 0; //images 위치값
+      const IMAGE_WIDTH = 250; //한번 이동 시 IMAGE_WIDTH만큼 이동한다.
+      //DOM
+      const backBtn = document.querySelector(".back");
+      const nextBtn = document.querySelector(".next");
+      const images = document.querySelector(".images");
+
+      function next() {
+        if (pages < 2) {
+          backBtn.removeAttribute("disabled"); //뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
+          positionValue -= IMAGE_WIDTH; //IMAGE_WIDTH의 증감을 positionValue에 저장한다.
+          images.style.transform = `translateX(${positionValue}px)`;
+          //x축으로 positionValue만큼의 px을 이동한다.
+          pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
         }
-      });
-    });
-  </script>
-</body>
+        if (pages === 2) {
+          //
+          nextBtn.setAttribute("disabled", "true"); //마지막 장일 때 next버튼이 disabled된다.
+        }
+      }
+
+      function back() {
+        if (pages > 0) {
+          nextBtn.removeAttribute("disabled");
+          positionValue += IMAGE_WIDTH;
+          images.style.transform = `translateX(${positionValue}px)`;
+          pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
+        }
+        if (pages === 0) {
+          backBtn.setAttribute("disabled", "true"); //마지막 장일 때 back버튼이 disabled된다.
+        }
+      }
+
+      function init() {
+        //초기 화면 상태
+        backBtn.setAttribute("disabled", "true"); //속성이 disabled가 된다.
+        backBtn.addEventListener("click", back); //클릭시 다음으로 이동한다.
+        nextBtn.addEventListener("click", next); //클릭시 이전으로 이동한다.
+      }
+      init();
+    </script>
+  </body>
+</html>

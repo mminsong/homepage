@@ -16,6 +16,7 @@
 }
 .intro_nav .nav_content{
     width: 100%;
+    position: relative;
 }
 .nav_title:hover{
     color:cornflowerblue;

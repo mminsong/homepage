@@ -45,13 +45,13 @@
   </head>
 
   <body>
-    <div id="nav"></div>
-    <script>
-      $(document).ready(function () {
-        $("#nav").load("nav.html");
-      });
-    </script>
-
+    <div id="nav">
+      <script>
+        $(document).ready(function () {
+          $("#nav").load("nav.html");
+        });
+      </script>
+    </div>
     <section class="main_pic">
       <div class="img">
         <img class="pic" src="../images/main_1.png" />
@@ -78,46 +78,95 @@
         </div>
         <img class="content" id="nav_title2" src="../images/intro_doctor.png" />
         <div class="content" id="nav_title3">
-          <div class="place_img">
-          <img class="place" src="../images/place_1.jpg" />
-          <img class="place" src="../images/place_2.jpg" />
-        </div>
+          <div class="slide">
+            <button class="prev"><</button>
+            <div class="place">
+              <img class="place_img" src="../images/place_1.jpg" />
+              <img class="place_img" src="../images/place_2.jpg" />
+              <img class="place_img" src="../images/place_3.jpg" />
+              <img class="place_img" src="../images/place_4.jpg" />
+            </div>
+          <button class="next">></button>
+          </div>
+          <script>
+            let pages = 0; //현재 인덱스 번호
+            let positionValue = 0; //images 위치값
+            const IMAGE_WIDTH = 500; //한번 이동 시 IMAGE_WIDTH만큼 이동한다.
+            //DOM
+            const backBtn = document.querySelector(".prev");
+            const nextBtn = document.querySelector(".next");
+            const images = document.querySelector(".place");
+            const imgCnt=$('.place_img').length -1;
+            function next() {
+              if (pages < imgCnt) {
+                backBtn.removeAttribute("disabled"); //뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
+                positionValue -= IMAGE_WIDTH; //IMAGE_WIDTH의 증감을 positionValue에 저장한다.
+                images.style.transform = `translateX(${positionValue}px)`;
+                //x축으로 positionValue만큼의 px을 이동한다.
+                pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
+              }
+              if (pages === imgCnt) {
+                //
+                nextBtn.setAttribute("disabled", "true"); //마지막 장일 때 next버튼이 disabled된다.
+              }
+            }
+
+            function back() {
+              if (pages > 0) {
+                nextBtn.removeAttribute("disabled");
+                positionValue += IMAGE_WIDTH;
+                images.style.transform = `translateX(${positionValue}px)`;
+                pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
+              }
+              if (pages === 0) {
+                backBtn.setAttribute("disabled", "true"); //마지막 장일 때 back버튼이 disabled된다.
+              }
+            }
+
+            function init() {
+              //초기 화면 상태
+              backBtn.setAttribute("disabled", "true"); //속성이 disabled가 된다.
+              backBtn.addEventListener("click", back); //클릭시 다음으로 이동한다.
+              nextBtn.addEventListener("click", next); //클릭시 이전으로 이동한다.
+            }
+            init();
+          </script>
         </div>
         <img class="content" id="nav_title4" src="../images/time.png" />
+
+        <script>
+          const $nav = document.querySelector("#nav_bar");
+          const $sections = document.querySelectorAll(".content");
+
+          window.onload = function () {
+            const initialSection = document.getElementById("nav_title1");
+
+            $sections.forEach(($section) => {
+              if ($section === initialSection) {
+                $section.removeAttribute("hidden"); // 초기 섹션 보이기
+              } else {
+                $section.setAttribute("hidden", true); // 나머지 숨기기
+              }
+            });
+          };
+
+          $nav.addEventListener("click", (e) => {
+            if (!e.target.classList.contains("nav_title")) {
+              return;
+            }
+
+            const focusedTabId = e.target.dataset.tabSection;
+
+            $sections.forEach(($section) => {
+              if ($section.id === focusedTabId) {
+                $section.removeAttribute("hidden");
+              } else {
+                $section.setAttribute("hidden", true);
+              }
+            });
+          });
+        </script>
       </div>
-
-      <script>
-        const $nav = document.querySelector("#nav_bar");
-        const $sections = document.querySelectorAll(".content");
-
-        window.onload = function () {
-          const initialSection = document.getElementById("nav_title1");
-
-          $sections.forEach(($section) => {
-            if ($section === initialSection) {
-              $section.removeAttribute("hidden"); // 초기 섹션 보이기
-            } else {
-              $section.setAttribute("hidden", true); // 나머지 숨기기
-            }
-          });
-        };
-
-        $nav.addEventListener("click", (e) => {
-          if (!e.target.classList.contains("nav_title")) {
-            return;
-          }
-
-          const focusedTabId = e.target.dataset.tabSection;
-
-          $sections.forEach(($section) => {
-            if ($section.id === focusedTabId) {
-              $section.removeAttribute("hidden");
-            } else {
-              $section.setAttribute("hidden", true);
-            }
-          });
-        });
-      </script>
     </section>
 
     <div id="footer"></div>
