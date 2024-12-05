@@ -11,14 +11,12 @@
 }
 #nav_title3 .prev {
   z-index: 1;
-  position: relative;
   top: 50%;
   width: 40px;
   height: 40px;
 }
 #nav_title3 .next {
   z-index: 1;
-  position: relative;
   top: -58%;
   left: 97%;
   width: 40px;
