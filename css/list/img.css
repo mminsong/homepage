@@ -7,6 +7,13 @@
   width: 60%;
   transform: translate(35%);
 }
+.nav_title{
+  color:black;
+}
+.click{
+  font-weight: bold;
+  color:cornflowerblue;
+}
 @media screen and (max-width: 480px) {
   #nav_title1 > img,
   #nav_title2 > img,

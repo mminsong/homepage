@@ -67,6 +67,18 @@
         <div class="nav_title" data-tab-section="nav_title2">의료진 소개</div>
         <div class="nav_title" data-tab-section="nav_title3">병원 둘러보기</div>
         <div class="nav_title" data-tab-section="nav_title4">진료시간</div>
+        <script>
+           const title=document.querySelectorAll('.nav_title');
+          function titleClick(){
+            title.forEach((e)=>{
+              e.classList.remove("click");
+            });
+            event.target.classList.add("click");
+          }
+          title.forEach((e)=>{
+            e.addEventListener("click",titleClick);
+          })
+        </script>
       </div>
 
       <div class="nav_content">
@@ -180,16 +192,7 @@
             });
           });
           
-          const title=document.querySelectorAll('.nav_title');
-          function titleClick(){
-            title.forEach((e)=>{
-              e.classList.remove("click");
-            });
-            event.target.classList.add("click");
-          }
-          title.forEach((e)=>{
-            e.addEventListener("click",titleClick);
-          })
+         
         </script>
       </div>
     </section>
