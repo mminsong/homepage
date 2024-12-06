@@ -29,7 +29,7 @@
   justify-content: space-around;
 }
 .first_nav .nav .menu_tab .menu_name {
-  font-size: 25px;
+  font-size: 30px;
   cursor: pointer;
 }
 .menu_tab:hover .sub_menu{
