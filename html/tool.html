@@ -64,7 +64,18 @@
       <div class="nav_title" data-tab-section="nav_title3">기구3</div>
       <div class="nav_title" data-tab-section="nav_title4">기구4</div>
       <div class="nav_title" data-tab-section="nav_title5">기구5</div>
-
+      <script>
+        const title=document.querySelectorAll('.nav_title');
+       function titleClick(){
+         title.forEach((e)=>{
+           e.classList.remove("click");
+         });
+         event.target.classList.add("click");
+       }
+       title.forEach((e)=>{
+         e.addEventListener("click",titleClick);
+       })
+     </script>
     </div>
 
     <div class="nav_content">
