@@ -19,6 +19,7 @@
   font-weight: 600;
   color: white;
   width: 50%;
+  text-shadow: 1px 0 0 brown;
 }
 .main_pic .pic_text > div {
   opacity: 0;
