@@ -1,6 +1,6 @@
 .first_nav{
   width: 100%;
-  background-color: aliceblue;
+  background-color: rgb(230, 225, 225);
   position: fixed;
   z-index: 1;
 }
@@ -45,7 +45,7 @@
   font-weight: 500;
 }
 .sub_menu .sub_menu_name:hover{
-  color: blue;
+  color: brown;
   font-weight: 700;
   cursor: pointer;
 }
