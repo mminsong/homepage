@@ -78,8 +78,8 @@
         </div>
         <img class="content" id="nav_title2" src="../images/intro_doctor.png" />
         <div class="content" id="nav_title3">
+          <button class="prev"><</button>
           <div class="slide">
-            <button class="prev"><</button>
             <div class="place">
               <img class="place_img" src="../images/place_1.jpg" />
               <img class="place_img" src="../images/place_2.jpg" />
@@ -89,17 +89,22 @@
               <img class="place_img" src="../images/place_6.jpg" />
               <img class="place_img" src="../images/place_7.jpg" />
               <img class="place_img" src="../images/place_8.jpg" />
-              <img class="place_img" src="../images/place_9.jpg" />
               <img class="place_img" src="../images/place_10.jpg" />
-              <img class="place_img" src="../images/place_11.jpg" />
-              <img class="place_img" src="../images/place_12.jpg" />
+              <img class="place_img" src="../images/place_13.jpg" />
+              <img class="place_img" src="../images/place_14.jpg" />
+              <img class="place_img" src="../images/place_15.jpg" />
+              <img class="place_img" src="../images/place_16.jpg" />
+              <img class="place_img" src="../images/place_17.jpg" />
+              <img class="place_img" src="../images/place_18.jpg" />
+              <img class="place_img" src="../images/place_19.jpg" />
+              <img class="place_img" src="../images/place_20.jpg" />
             </div>
-            <button class="next">></button>
           </div>
+          <button class="next">></button>
           <script>
             let pages = 0; //현재 인덱스 번호
             let positionValue = 0; //images 위치값
-            const IMAGE_HEIGHT = 105; //한번 이동 시 IMAGE_HEIGHT만큼 이동한다.
+            const IMAGE_HEIGHT = 100; //한번 이동 시 IMAGE_HEIGHT만큼 이동한다.
             //DOM
             const backBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
@@ -109,7 +114,7 @@
               if (pages < imgCnt) {
                 backBtn.removeAttribute("disabled"); //뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
                 positionValue -= IMAGE_HEIGHT; //IMAGE_HEIGHT의 증감을 positionValue에 저장한다.
-                images.style.transform = `translateY(${positionValue}%)`;
+                images.style.transform = `translateX(${positionValue}%)`;
                 //x축으로 positionValue만큼의 px을 이동한다.
                 pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
               }
@@ -123,7 +128,7 @@
               if (pages > 0) {
                 nextBtn.removeAttribute("disabled");
                 positionValue += IMAGE_HEIGHT;
-                images.style.transform = `translateY(${positionValue}%)`;
+                images.style.transform = `translateX(${positionValue}%)`;
                 pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
               }
               if (pages === 0) {
