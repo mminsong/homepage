@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="../css/pic.css" />
     <link rel="stylesheet" type="text/css" href="../css/introduce/img.css" />
     <link rel="stylesheet" type="text/css" href="../css/intro_nav.css" />
-    <script src="../js/intro_nav.js"></script>
     <style>
       html {
         height: 100%;
@@ -106,7 +105,7 @@
             let pages = 0; //현재 인덱스 번호
             let positionValue = 0; //images 위치값
             const IMAGE_WIDTH = 100; //한번 이동 시 IMAGE_WIDTH 이동한다.
-            const Iwidth = $(".place_img").width();
+            const Iwidth=$('.place_img').width();
             //DOM
             const backBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
@@ -180,18 +179,17 @@
               }
             });
           });
-          /*
-          const title = document.querySelectorAll(".nav_title");
-          function titleClick() {
-            title.forEach((e) => {
+          
+          const title=document.querySelectorAll('.nav_title');
+          function titleClick(){
+            title.forEach((e)=>{
               e.classList.remove("click");
             });
             event.target.classList.add("click");
           }
-          title.forEach((e) => {
-            e.addEventListener("click", titleClick);
-          });
-          */
+          title.forEach((e)=>{
+            e.addEventListener("click",titleClick);
+          })
         </script>
       </div>
     </section>
