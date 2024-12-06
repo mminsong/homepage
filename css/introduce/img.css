@@ -46,6 +46,14 @@
   transition: transform 0.5s;
   object-fit: cover;
 }
+.nav_title{
+  color:black;
+}
+.click{
+  font-weight: bold;
+  color:cornflowerblue;
+}
+
 /*
 #nav_title3 .place{
     display: flex;
