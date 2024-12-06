@@ -19,7 +19,7 @@
   font-weight: 600;
   color: white;
   width: 50%;
-  text-shadow: 1px 0 0 brown;
+  text-shadow: 0 0 10px burlywood;
 }
 .main_pic .pic_text > div {
   opacity: 0;
@@ -30,7 +30,7 @@
   width: 300px;
   height: auto;
 }
-.place .pic_1 {
+.place .pic_1{
   /* 나타나는 효과가 2.5초동안 발생 */
   transition: 3s;
 
@@ -39,7 +39,7 @@
 
   /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
   position: relative;
-  left: -50px;
+  left: -60px;
 }
 .place .pic_1.fade-in {
   /* 투명도 0 (보임) */

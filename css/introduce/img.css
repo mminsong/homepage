@@ -3,12 +3,12 @@
   transform: translate(35%);
 }
 #nav_title2 {
-  width: 100%;
-}
-#nav_title2 ,
-#nav_title3 {
   width: 60%;
   transform: translate(35%);
+}
+#nav_title3{
+  width: 70%;
+  transform: translate(27%);
 }
 #nav_title3 .prev {
   z-index: 1;
