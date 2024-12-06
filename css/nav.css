@@ -1,6 +1,6 @@
 .first_nav{
   width: 100%;
-  background-color: rgb(230, 225, 225);
+  background-color: whitesmoke;
   position: fixed;
   z-index: 1;
 }
@@ -9,6 +9,7 @@
   display: flex;
   padding: 20px 0;
   left: 10%;
+  
   position: relative;
 }
 .first_nav .nav .logo {
@@ -45,7 +46,7 @@
   font-weight: 500;
 }
 .sub_menu .sub_menu_name:hover{
-  color: brown;
+  color: burlywood;
   font-weight: 700;
   cursor: pointer;
 }
