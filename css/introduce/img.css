@@ -22,7 +22,7 @@
 #nav_title3 .next {
   z-index: 1;
   top:50%;
-  right: 0;
+  right: 8%;
   position: absolute;
   width: 40px;
   height: 40px;
@@ -30,7 +30,7 @@
   border: 1px solid;
 }
 #nav_title3 .slide {
-  width: 100%;
+  width: 92%;
   height: 700px;
   overflow: hidden;
 }
