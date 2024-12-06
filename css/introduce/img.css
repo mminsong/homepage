@@ -8,7 +8,6 @@
 #nav_title3 {
   width: 60%;
   transform: translate(35%);
-  display: flex;
 }
 #nav_title3 .prev {
   z-index: 1;
