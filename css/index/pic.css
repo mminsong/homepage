@@ -27,7 +27,6 @@
 }
 
 .place > img {
-  width: 300px;
   height: auto;
 }
 .place .pic_1{
@@ -50,6 +49,14 @@
 }
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
+  .main_pic .pic{
+    height: 600px;
+  }
+  .main_pic .pic_text{
+    font-size: 15px;
+    line-height: 22px;
+  }
+
   .main_pic .img .pic_text > div {
     font-size: 15px;
     line-height: 25px;
