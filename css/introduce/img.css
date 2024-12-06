@@ -46,6 +46,11 @@
   transition: transform 0.5s;
   object-fit: cover;
 }
+#nav_title4{
+  width: 60%;
+  transform: translate(35%);
+  height: 80%;
+}
 .nav_title{
   color:black;
 }
@@ -63,9 +68,6 @@
     transform: translate(35%);
 }
 */
-#nav_title4 {
-  width: 100%;
-}
 @media screen and (max-width: 480px) {
   #nav_title1 > img {
     width: 100%;

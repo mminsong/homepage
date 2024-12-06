@@ -1,121 +1,110 @@
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="slide.css" />
-    <script defer src="slide.js"></script>
-    <title>slide</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade In 효과와 Intersection Observer</title>
     <style>
-      .box {
-        width: 250px;
-        margin: 0 auto; /**중앙 정렬한다.**/
-      }
+      .pv-box {
+        border: 1px solid black;
+        padding: 10px;
 
-      /**사진**/
-      .slide {
-        /**이만큼의 크기로 보이겠다는 의미**/
-        width: 250px;
-        height: 333px; /**사진보다 크면 다음 사진까지 표시되어 img와 slide크기를 맞춘다.**/
-        overflow: hidden; /**이미지는 내장이라 overflow:hidden을 사용해 넘친 사진들을 안보이게 한다.**/
+        height: 500px;
+        overflow-y: scroll;
       }
-      .images {
-        display: flex; /**좌우 슬라이드를 위해 flex로 사진을 가로정렬한다.**/
-        height: 333px; /**slide와 images의 높이가 다르면 부자연스럽게 표시돼 slide의 높이에 맞게 높이를 바꾼다.**/
-        transition: transform 0.5s;
-        /**어떤 속성에 대해 애니메이션 효과를 주는 속성이다. 
-tranform속성에 0.5초의 듀레이션(동작의 시작해서 끝나는 시간)을 준다.**/
+      .pv-box img {
+        width: 300px;
+        height: auto;
       }
-      img {
-        width: 250px;
-        height: 333px; /**slide 크기에 맞춘다.**/
-      }
+      .pv-box .fade-wrap {
+        /* 나타나는 효과가 1초동안 발생 */
+        transition: 1s;
 
-      /**버튼위치**/
-      .back {
+        /* 투명도 0 (안보임) */
+        opacity: 0;
+
+        /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
         position: relative;
-        bottom: 170px;
-        right: 35px;
-      }
-      .next {
-        position: relative;
-        bottom: 170px;
-        left: 220px;
-      }
+        left: -50px;
 
-      /**버튼디자인**/
-      button {
-        width: 30px;
-        height: 30px;
-        color: white;
-        background: #646464;
+        margin-bottom: 20px;
       }
-      button:active {
-        /**버튼을 클릭하는 동안 색을 바꾼다.**/
-        background: #3e3e3e;
-      }
-      button:disabled {
-        /**버튼 속성이 disabled되면 색을 바꾼다.**/
-        background: #cbcaca;
+      .pv-box .fade-wrap.fade-in {
+        /* 투명도 0 (보임) */
+        opacity: 1;
+
+        /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+        left: 0;
       }
     </style>
   </head>
   <body>
-    <div class="box">
-      <h2>food slide</h2>
-      <!--div를 두개 감싼이유는 img들을 좌우배치하고 배치된 사진중 한장만 보이게 하기 위해서이다.-->
-      <div class="slide">
-        <!--배치된 img들을 하나의 img만 보이게 가리기 위한 태그-->
-        <div class="images">
-          <!--img들을 좌우배치할 태그-->
-          <img src="../images/1.jpg" />
-          <img src="../images/2.jpg" />
-          <img src="../images/3.jpg" />
-        </div>
+    <div class="pv-box">
+      <div class="fade-wrap">
+        <h2>첫 번째 섹션</h2>
+        <img src="../images/place_1.jpg" alt="img" />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis rem
+          voluptatem deleniti quae, nisi quas minus sint explicabo? Similique
+          quae minus consequuntur sint, commodi placeat hic ullam necessitatibus
+          optio alias?
+        </p>
       </div>
-      <button class="back">❮</button>
-      <button class="next">❯</button>
+      <div class="fade-wrap">
+        <h2>두 번째 섹션</h2>
+        <img src="../images/place_2.jpg" alt="img" />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere optio
+          iure labore quo cum excepturi fugit, eum ad velit! Placeat velit a
+          officiis architecto perspiciatis possimus aspernatur nostrum veritatis
+          maiores?
+        </p>
+      </div>
+      <div class="fade-wrap">
+        <h2>세 번째 섹션</h2>
+        <img src="../images/place_3.jpg" alt="img" />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+          porro atque officiis explicabo dolores error ullam. Ea quidem
+          voluptate, ullam odit rem error, maxime voluptas hic, voluptatem
+          nesciunt eum in!
+        </p>
+      </div>
+      <div class="fade-wrap">
+        <h2>네 번째 섹션</h2>
+        <img src="../images/place_4.jpg" alt="img" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus
+          doloremque, nam deleniti fugit vel totam dolorum placeat architecto
+          consectetur quia incidunt. Nam, iusto quisquam in vero cum assumenda
+          rerum?
+        </p>
+      </div>
     </div>
     <script>
-      let pages = 0; //현재 인덱스 번호
-      let positionValue = 0; //images 위치값
-      const IMAGE_WIDTH = 250; //한번 이동 시 IMAGE_WIDTH만큼 이동한다.
-      //DOM
-      const backBtn = document.querySelector(".back");
-      const nextBtn = document.querySelector(".next");
-      const images = document.querySelector(".images");
+      /* javascript */
+      // Intersection Observer 생성
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // 화면에 들어옴
+              entry.target.classList.add("fade-in");
+            } else {
+              // 화면에서 나감
+              entry.target.classList.remove("fade-in");
+            }
+          });
+        },
+        // 화면에서 해당 요소가 10% 이상 보일 경우 화면에 들어온 것으로 판단함
+        { threshold: 0.1 }
+      );
 
-      function next() {
-        if (pages < 2) {
-          backBtn.removeAttribute("disabled"); //뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
-          positionValue -= IMAGE_WIDTH; //IMAGE_WIDTH의 증감을 positionValue에 저장한다.
-          images.style.transform = `translateX(${positionValue}px)`;
-          //x축으로 positionValue만큼의 px을 이동한다.
-          pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
-        }
-        if (pages === 2) {
-          //
-          nextBtn.setAttribute("disabled", "true"); //마지막 장일 때 next버튼이 disabled된다.
-        }
-      }
-
-      function back() {
-        if (pages > 0) {
-          nextBtn.removeAttribute("disabled");
-          positionValue += IMAGE_WIDTH;
-          images.style.transform = `translateX(${positionValue}px)`;
-          pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
-        }
-        if (pages === 0) {
-          backBtn.setAttribute("disabled", "true"); //마지막 장일 때 back버튼이 disabled된다.
-        }
-      }
-
-      function init() {
-        //초기 화면 상태
-        backBtn.setAttribute("disabled", "true"); //속성이 disabled가 된다.
-        backBtn.addEventListener("click", back); //클릭시 다음으로 이동한다.
-        nextBtn.addEventListener("click", next); //클릭시 이전으로 이동한다.
-      }
-      init();
+      // 관찰 대상 설정
+      const targetElements = document.querySelectorAll(".fade-wrap");
+      targetElements.forEach((element) => {
+        observer.observe(element);
+      });
     </script>
   </body>
 </html>

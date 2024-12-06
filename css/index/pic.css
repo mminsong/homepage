@@ -1,33 +1,56 @@
-.main_pic{
-    width: 100%;
-    position: relative;
+.main_pic {
+  width: 100%;
+  position: relative;
 }
-.main_pic .pic{
-    width: 100%;
-    height: 600px;
-    display: block;
-    object-fit: cover;
+.main_pic .pic {
+  width: 100%;
+  height: 850px;
+  display: block;
+  object-fit: cover;
 }
-.main_pic .pic_text{
-    position: absolute;
-    top: 80%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 25px;
-    line-height: 38px;
-    font-weight: 600;
-    color: white;
-    width: 50%;
+.main_pic .pic_text {
+  position: absolute;
+  top: 80%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 25px;
+  line-height: 38px;
+  font-weight: 600;
+  color: white;
+  width: 50%;
 }
-.main_pic .pic_text > div{
-    opacity: 0;
-    animation: fadeIn 5s ease forwards;
+.main_pic .pic_text > div {
+  opacity: 0;
+  animation: fadeIn 5s ease forwards;
+}
 
+.place > img {
+  width: 300px;
+  height: auto;
 }
-@media screen and (min-width: 300px) and (max-width:500px){
-	.main_pic .img .pic_text > div{
+.place .pic_1 {
+  /* 나타나는 효과가 2.5초동안 발생 */
+  transition: 3s;
+
+  /* 투명도 0 (안보임) */
+  opacity: 0;
+
+  /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+  position: relative;
+  left: -50px;
+}
+.place .pic_1.fade-in {
+  /* 투명도 0 (보임) */
+  opacity: 1;
+
+  /* 왼쪽에서 오른쪽으로 나타나게 하기 위함 */
+  left: 0;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .main_pic .img .pic_text > div {
     font-size: 15px;
     line-height: 25px;
-    }
+  }
 }
