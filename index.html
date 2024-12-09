@@ -150,18 +150,31 @@
       </div>
     </section>
     <section class="mobile_nav">
-
       <div id="ham">
+        <div class="ham_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div onclick="history.back();" class="ham_cover"></div>
+        </div>
         
-      <div class="ham_btn"></div>
-      <div onclick="history.back();" class="ham_cover"></div>
         <div class="ham_nav">
-          <div class="ham_menu" onclick="location.href='html/introduce.html'">치과소개</div>
-          <div class="ham_menu" onclick="location.href='html/list.html'">진료과목</div>
-          <div class="ham_menu" onclick="location.href='html/map.html'">진료철학</div>
-          <div class="ham_menu" onclick="location.href='html/map.html'">둘러보기</div>
-          <div class="ham_menu" onclick="location.href='html/map.html'">오시는길</div>
-        </d>
+          <div class="ham_menu" onclick="location.href='html/introduce.html'">
+            치과소개
+          </div>
+          <div class="ham_menu" onclick="location.href='html/list.html'">
+            진료과목
+          </div>
+          <div class="ham_menu" onclick="location.href='html/map.html'">
+            진료철학
+          </div>
+          <div class="ham_menu" onclick="location.href='html/map.html'">
+            둘러보기
+          </div>
+          <div class="ham_menu" onclick="location.href='html/map.html'">
+            오시는길
+          </div>
+        </div>
         <!--
         <div onclick="history.back();" class="close"></div>
         -->
@@ -173,7 +186,7 @@
             window.location.hash = "#open";
           });
         });
-
+        
         window.onhashchange = function () {
           if (location.hash != "#open") {
             $("#ham,.ham_cover,html").removeClass("open");
