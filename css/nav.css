@@ -84,28 +84,34 @@
   .mobile_nav{
     display: block;
   }
-  .ham_cover .open{
+
+  html.open {
+    overflow: hidden;
+  }
+
+  .ham_cover.open {
     display: block;
   }
+
   .ham_btn {
     width: 50px;
     height: 50px;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    left: 0;
     top: 0px;
-    z-index: 2;
+    z-index: 1;
     background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/menu.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
   }
-
-  .ham_close {
+/*
+  .close {
     width: 50px;
     height: 50px;
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 0px;
     background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
     background-size: 50%;
@@ -113,24 +119,24 @@
     background-position: center;
     cursor: pointer;
   }
-
+*/
   #ham {
     width: 150px;
     height: 100%;
     position: fixed;
-    right:0;
-    z-index: 1;
-    border: 1px solid #c9c9c9;
-    background-color: white;
+    top: 0px;
+    left: -202px;
+    z-index: 2;
     text-align: center;
     font-weight: bold;
     transition: All 0.2s ease;
     -webkit-transition: All 0.2s ease;
     -moz-transition: All 0.2s ease;
     -o-transition: All 0.2s ease;
+    padding-top: 50px;
   }
 
-  #ham .ham_nav.ham_menu {
+  #ham .ham_nav .ham_menu {
     padding: 0;
     text-decoration: none;
     font-size: 18px;
@@ -138,9 +144,16 @@
     display: block;
     transition: 0.3s;
   }
+
+  #ham.open {
+    left: 0px;
+    width: 100%;
+  }
+
   .ham_cover.open {
     display: block;
   }
+
   .ham_cover {
     width: 100%;
     height: 100%;
@@ -153,11 +166,9 @@
   }
 
   #ham .ham_nav {
-    width: 190px;
     margin: 0;
     padding: 0;
   }
-
 
   #ham .ham_nav .ham_menu {
     display: block;
@@ -165,11 +176,11 @@
     height: 100%;
     line-height: 50px;
     text-indent: 20px;
-    text-align: left;
-    color: #25a4cd;
+    text-align: center;
+    color: black;
     font-weight: bold;
     text-decoration: none;
-
+    
     position: relative;
     float: left;
     width: 100%;
@@ -177,9 +188,7 @@
     font-size: 18px;
   }
 
-  #ham .ham_nav .ham_menu:hover {
-    background: #eee;
-  }
+
 
 }
 @media screen and (min-width: 481px) and (max-width:768px) {
