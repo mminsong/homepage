@@ -150,14 +150,20 @@
       </div>
     </section>
     <section class="mobile_nav">
-      <div id="ham">
+      <div class="nav">
+        <div class="title" onclick="loaction.href='../index.html'">
+          <img class="teeth" src="images/teeth.png" />
+          <div class="title_text">배곧건치과의원</div>
+        </div>
         <div class="ham_btn">
           <span></span>
           <span></span>
           <span></span>
           <div onclick="history.back();" class="ham_cover"></div>
         </div>
-        
+      </div>
+
+      <div class="ham">
         <div class="ham_nav">
           <div class="ham_menu" onclick="location.href='html/introduce.html'">
             치과소개
@@ -175,24 +181,20 @@
             오시는길
           </div>
         </div>
-        <!--
-        <div onclick="history.back();" class="close"></div>
-        -->
       </div>
       <script>
         $(document).ready(function () {
           $(".ham_btn").click(function () {
-            $("#ham,.ham_cover,html").addClass("open");
+            $(".ham,.ham_cover").addClass("open");
             window.location.hash = "#open";
           });
         });
-        
+
         window.onhashchange = function () {
           if (location.hash != "#open") {
-            $("#ham,.ham_cover,html").removeClass("open");
+            $(".ham,.ham_cover").removeClass("open");
           }
         };
-
       </script>
     </section>
     <section class="main_pic">

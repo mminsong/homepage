@@ -57,34 +57,28 @@
   .first_nav{
     display: none;
   }
-  /*
-  .nav {
-    width: 100%;
-    padding: 20px 0;
-    position: fixed;
-  }
-  .nav .logo {
-    width: 40%;
-  }
-  .nav .logo .logo_img > img {
-    width: 15px;
-  }
-  .nav .logo .logo_text {
-    margin-left: 10px;
-    font-size: 13px;
-  }
-  .nav .menu_tab {
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-  }
-  .nav .menu_tab .menu_name {
-    font-size: 13px;
-  }*/
   .mobile_nav{
     display: block;
   }
-
+  .nav{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    z-index: 3;
+    position: fixed;
+    background-color: whitesmoke;
+  }
+  .nav .title{
+    width: 80%;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+    padding: 16px;
+  }
+  .nav .title .title_text{
+    padding-left: 10px;
+    font-size: 30px;
+  }
   html.open {
     overflow: hidden;
   }
@@ -93,18 +87,12 @@
     display: block;
   }
   .ham_btn {
-    width: 70px;
-    height: 70px;
+    width: 20%;
+    height: 5%;
     position: fixed;
-    left: 10px;
+    right:0;
     top: 5px;
     z-index: 1;
-    /*
-    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/menu.png");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    */
     cursor: pointer;
   }
   .ham_btn > span{
@@ -115,43 +103,43 @@
     left:0px;
     border-radius: 3px;
   }
-  .ham_btn span:nth-child(1) {
+  span:nth-child(1) {
     top: 15px;
   }
-  .ham_btn span:nth-child(2) {
+  span:nth-child(2) {
     top: 30px;
   }
-  .ham_btn span:nth-child(3) {
+  span:nth-child(3) {
     top: 45px;
   }
-  .ham_btn.open span:nth-child(1) {
-    top: 50px;
+  .ham .open span:nth-child(1) {
+    top: 28px;
     transform: rotate(135deg);
   }
-  .ham_btn.open span:nth-child(2) {
+  .ham.open span:nth-child(2) {
     opacity: 0;
   }
-  .ham_btn.open span:nth-child(3) {
-    top: 50px;
+  .ham.open span:nth-child(3) {
+    top: 28px;
     transform: rotate(-135deg);
   }
-  #ham {
-    width: 150px;
+  .ham {
+    width: 100px;
     height: 100%;
     position: fixed;
     top: 0px;
-    left: -202px;
+    left:-202px;
     z-index: 2;
     text-align: center;
     font-weight: bold;
+    
     transition: All 0.2s ease;
     -webkit-transition: All 0.2s ease;
     -moz-transition: All 0.2s ease;
     -o-transition: All 0.2s ease;
-    padding-top: 50px;
   }
 
-  #ham.open {
+  .ham.open {
     left: 0px;
     width: 100%;
   }
@@ -170,21 +158,24 @@
     display: none;
   }
 
-
-  #ham .ham_nav .ham_menu {
-    display: block;
+  .ham .ham_nav{
     width: 100%;
     height: 100%;
+    margin-top: 75px; 
+    background-color: whitesmoke;
+  }
+  .ham .ham_nav .ham_menu {
+    display: block;
+    width: 100%;
+    height: 8%;
     line-height: 60px;
     text-indent: 20px;
     text-align: center;
     color: black;
     font-weight: bold;
     text-decoration: none;
-    
     position: relative;
     float: left;
-    width: 100%;
     list-style-type: none;
     font-size: 23px;
   }
