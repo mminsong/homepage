@@ -10,16 +10,16 @@
 }
 .main_pic .pic_text {
   position: absolute;
-  top: 80%;
-  left: 75%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 25px;
-  line-height: 38px;
+  font-size: 35px;
+  line-height: 55px;
   font-weight: 600;
   color: white;
   width: 50%;
-  text-shadow: 0 0 10px burlywood;
+  text-shadow: 0 0 6px brown;
 }
 .main_pic .pic_text > div {
   opacity: 0;
