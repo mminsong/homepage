@@ -1,160 +1,168 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>배곧건치과의원</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/teeth.png" />
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>배곧건치과의원</title>
-  <link rel="shortcut icon" type="image/x-icon" href="../images/teeth.png" />
-  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="../css/nav.css" />
-  <link rel="stylesheet" type="text/css" href="../css/footer.css" />
-  <link rel="stylesheet" type="text/css" href="../css/pic.css" />
-  <link rel="stylesheet" type="text/css" href="../css/intro_nav.css" />
-  <link rel="stylesheet" type="text/css" href="../css/list/img.css" />
-  <style>
-    html {
-      height: 100%;
-      width: 100%;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/pic.css" />
+    <link rel="stylesheet" type="text/css" href="../css/intro_nav.css" />
+    <link rel="stylesheet" type="text/css" href="../css/list/img.css" />
+    <meta property="og:url" content="https://mminsong.github.io/homepage/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="모두의 건치를 위한" />
+    <meta property="og:description" content="배곧건치과의원" />
+    <meta property="og:image" content="../images/place_8.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <style>
+      html {
+        height: 100%;
+        width: 100%;
       }
 
-      to {
-        opacity: 1;
+      body {
+        margin: 0;
+        min-height: 100vh;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div id="nav"></div>
-  <script>
-    $(document).ready(function () {
-      $("#nav").load("nav.html");
-    });
-  </script>
-  <section class="main_pic">
-    <div class="img">
-      <img class="pic" src="../images/list.jpg" />
-      <div class="pic_text">
-        <div class="pic_text1">치료 항목</div>
-        <div class="pic_text2">배곧건치과의원</div>
-      </div>
-    </div>
-  </section>
-  <section class="intro_nav">
-    <div id="nav_bar" class="nav_bar">
-      <div class="nav_title" data-tab-section="nav_title1">구강검진</div>
-      <div class="nav_title" data-tab-section="nav_title2">임플란트</div>
-      <div class="nav_title" data-tab-section="nav_title3">심미치료</div>
-      <div class="nav_title" data-tab-section="nav_title4">신경치료</div>
-      <div class="nav_title" data-tab-section="nav_title5">소아진료</div>
-      <div class="nav_title" data-tab-section="nav_title6">투명교정</div>
-      <script>
-        const title=document.querySelectorAll('.nav_title');
-       function titleClick(){
-         title.forEach((e)=>{
-           e.classList.remove("click");
-         });
-         event.target.classList.add("click");
-       }
-       title.forEach((e)=>{
-         e.addEventListener("click",titleClick);
-       })
-     </script>
-    </div>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <div class="nav_content">
-      <div class="content" id="nav_title1">
-        <img src="../images/check_1.png">
-        <img src="../images/check_2.png">
-        <img src="../images/check_3.png">
-      </div>
-      <div class="content" id="nav_title2">
-        <img src="../images/implant_1.png">
-        <img src="../images/implant_2.png">
-      </div>
-      <div class="content" id="nav_title3">
-        <img src="../images/simi_1.png">
-        <img src="../images/simi_2.png">
-        <img src="../images/simi_3.png">
-        <img src="../images/simi_4.png">
-        <img src="../images/simi_5.png">
-        <img src="../images/simi_6.png">
-      </div>
-      <div class="content" id="nav_title4">
-        <img src="../images/nerve_1.png">
-        <img src="../images/nerve_2.png">
-        <img src="../images/nerve_3.png">
-      </div>
-      <div class="content" id="nav_title5">
-        <img src="../images/child_1.png">
-        <img src="../images/child_2.png">
-        <img src="../images/child_3.png">
-      </div>
-      <div class="content" id="nav_title6">
-        <img src="../images/correct_1.png">
-        <img src="../images/correct_2.png">
-        <img src="../images/correct_3.png">
-      </div>
-    </div>
-
-    <script>
-      const $nav = document.querySelector('#nav_bar')
-      const $sections = document.querySelectorAll('.content');
-
-      window.onload = function () {
-        const initialSection = document.getElementById("nav_title1");
-
-        $sections.forEach(($section) => {
-          if ($section === initialSection) {
-            $section.removeAttribute('hidden'); // 초기 섹션 보이기
-          } else {
-            $section.setAttribute('hidden', true); // 나머지 숨기기
-          }
-        });
-      };
-
-      $nav.addEventListener('click', (e) => {
-        if (!e.target.classList.contains('nav_title')) {
-          return;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
 
-        const focusedTabId = e.target.dataset.tabSection;
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
 
-        $sections.forEach(($section) => {
-          if ($section.id === focusedTabId) {
-            $section.removeAttribute('hidden');
-          } else {
-            $section.setAttribute('hidden', true);
-          }
-        });
+  <body>
+    <div id="nav"></div>
+    <script>
+      $(document).ready(function () {
+        $("#nav").load("nav.html");
       });
     </script>
-  </section>
-  <div id="footer"></div>
-  <script>
-    $(document).ready(function () {
-      $("#footer").load("footer.html");
-    });
-  </script>
-</body>
+    <section class="main_pic">
+      <div class="img">
+        <img class="pic" src="../images/list.jpg" />
+        <div class="pic_text">
+          <div class="pic_text1">치료 항목</div>
+          <div class="pic_text2">배곧건치과의원</div>
+        </div>
+      </div>
+    </section>
+    <section class="intro_nav">
+      <div id="nav_bar" class="nav_bar">
+        <div class="nav_title" data-tab-section="nav_title1">구강검진</div>
+        <div class="nav_title" data-tab-section="nav_title2">임플란트</div>
+        <div class="nav_title" data-tab-section="nav_title3">심미치료</div>
+        <div class="nav_title" data-tab-section="nav_title4">신경치료</div>
+        <div class="nav_title" data-tab-section="nav_title5">소아진료</div>
+        <div class="nav_title" data-tab-section="nav_title6">투명교정</div>
+        <script>
+          const title = document.querySelectorAll(".nav_title");
+          function titleClick() {
+            title.forEach((e) => {
+              e.classList.remove("click");
+            });
+            event.target.classList.add("click");
+          }
+          title.forEach((e) => {
+            e.addEventListener("click", titleClick);
+          });
+        </script>
+      </div>
 
+      <div class="nav_content">
+        <div class="content" id="nav_title1">
+          <img src="../images/check_1.png" />
+          <img src="../images/check_2.png" />
+          <img src="../images/check_3.png" />
+        </div>
+        <div class="content" id="nav_title2">
+          <img src="../images/implant_1.png" />
+          <img src="../images/implant_2.png" />
+        </div>
+        <div class="content" id="nav_title3">
+          <img src="../images/simi_1.png" />
+          <img src="../images/simi_2.png" />
+          <img src="../images/simi_3.png" />
+          <img src="../images/simi_4.png" />
+          <img src="../images/simi_5.png" />
+          <img src="../images/simi_6.png" />
+        </div>
+        <div class="content" id="nav_title4">
+          <img src="../images/nerve_1.png" />
+          <img src="../images/nerve_2.png" />
+          <img src="../images/nerve_3.png" />
+        </div>
+        <div class="content" id="nav_title5">
+          <img src="../images/child_1.png" />
+          <img src="../images/child_2.png" />
+          <img src="../images/child_3.png" />
+        </div>
+        <div class="content" id="nav_title6">
+          <img src="../images/correct_1.png" />
+          <img src="../images/correct_2.png" />
+          <img src="../images/correct_3.png" />
+        </div>
+      </div>
+
+      <script>
+        const $nav = document.querySelector("#nav_bar");
+        const $sections = document.querySelectorAll(".content");
+
+        window.onload = function () {
+          const initialSection = document.getElementById("nav_title1");
+
+          $sections.forEach(($section) => {
+            if ($section === initialSection) {
+              $section.removeAttribute("hidden"); // 초기 섹션 보이기
+            } else {
+              $section.setAttribute("hidden", true); // 나머지 숨기기
+            }
+          });
+        };
+
+        $nav.addEventListener("click", (e) => {
+          if (!e.target.classList.contains("nav_title")) {
+            return;
+          }
+
+          const focusedTabId = e.target.dataset.tabSection;
+
+          $sections.forEach(($section) => {
+            if ($section.id === focusedTabId) {
+              $section.removeAttribute("hidden");
+            } else {
+              $section.setAttribute("hidden", true);
+            }
+          });
+        });
+      </script>
+    </section>
+    <div id="footer"></div>
+    <script>
+      $(document).ready(function () {
+        $("#footer").load("footer.html");
+      });
+    </script>
+  </body>
 </html>
