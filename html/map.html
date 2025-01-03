@@ -90,15 +90,10 @@
             url: '../images/teeth.png'
           }
         });
-        var contentString=[
-          '<div class="iw_inner">',
-          '<p style="font-size: 2rem; margin:0;">배곧건치과의원</p>',
-          '</div>'
-        ].join('');
-        var infowindow=new naver.maps.infowindow({
-          content: contentString
+        var infowindow=new naver.maps.Infowindow({
+          content: '<div>배곧건</div>'
         });
-        infowindow.open(map, marker);
+        infowindow.push(infowindow);
       </script>
     <div class="map_detail">
       <div> 주소 : 경기도 시흥시 배곧5로 66-7 2층</div>
